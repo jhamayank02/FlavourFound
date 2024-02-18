@@ -1,0 +1,17 @@
+.contact-container{
+    position: relative;
+    overflow: hidden;
+}
+
+.contact-container::before{
+    content: "";
+    background-repeat: no-repeat;
+    position: absolute;
+    height: 100%;
+    width: 500px;
+    top: -147px;
+    background-size: contain;
+    left: -118px;
+    background-image: url('../../../assets/svg/bg.svg');
+    z-index: -1;
+}

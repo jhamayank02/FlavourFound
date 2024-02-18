@@ -1,0 +1,17 @@
+.categories-content{
+    position: relative;
+    overflow: hidden;
+}
+
+.categories-content::before{
+    content: "";
+    background-repeat: no-repeat;
+    position: absolute;
+    height: 100%;
+    width: 500px;
+    top: 0;
+    background-size: contain;
+    right: -20px;
+    background-image: url('../../../assets/svg/bg.svg');
+    z-index: -1;
+}
