@@ -33,11 +33,11 @@ function PaymentPage() {
     }, []);
 
   return (
-    <div>
-        <div className='mx-5 cursor-pointer text-[#404040] hover:text-[#f05941]' onClick={goToPrevPageHandler}><i className='bx bx-left-arrow-alt'></i>Go back</div>
+    <div className='flex-1'>
+        <div className='my-5 text-4xl mx-5 cursor-pointer text-[#404040] hover:text-[#f05941]' onClick={goToPrevPageHandler}><i className='bx bx-left-arrow-alt'></i>Go back</div>
 
-        <div className='w-[400px] mx-auto mt-2'>
-            <h1 className='text-3xl mb-5 text-[#2d2d2de8]'>Checkout Page</h1>
+        <div className='w-[90%] mx-auto mt-2'>
+            <h1 className='text-6xl mb-12 text-[#2d2d2de8]'>Checkout Page</h1>
             {stripePromise && clientSecret && <Elements stripe={stripePromise} options={{clientSecret}}>
                 <CheckoutForm />
             </Elements>}

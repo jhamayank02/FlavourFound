@@ -52,24 +52,24 @@ const OrderForm = ({hideOrderFormHandler})=>{
     }
 
     return <Modal hideModal={hideOrderFormHandler}>
-        <div className="order-container">
+        <div className="w-[90%] py-4 mx-auto order-container">
 
 
         <form onSubmit={proceedToPayment}>
 
-            <h1 className="text-3xl mb-5 text-[#2d2d2de8]">Shipping details</h1>
+            <h1 className="text-6xl mb-12 text-[#2d2d2de8]">Shipping details</h1>
 
-            <input ref={lineRef} type="text" required className="focus:outline-1 focus:outline-[#c9c9c9] border-[1px] mb-2 py-1 px-3 rounded-sm w-[100%]" placeholder="Street/House No./Apartment"></input>
-            <input ref={postalCodeRef} required type="number" className="focus:outline-1 focus:outline-[#c9c9c9] border-[1px] mb-2 py-1 px-3 rounded-sm w-[100%]" placeholder="Postal Code"></input>
-            <input ref={cityRef} required type="text" className="focus:outline-1 focus:outline-[#c9c9c9] border-[1px] mb-2 py-1 px-3 rounded-sm w-[100%]" placeholder="City"></input>
-            <input ref={stateRef} required type="text" className="focus:outline-1 focus:outline-[#c9c9c9] border-[1px] mb-2 py-1 px-3 rounded-sm w-[100%]" placeholder="State"></input>
-            <input ref={countryRef} required type="text" className="focus:outline-1 focus:outline-[#c9c9c9] border-[1px] mb-2 py-1 px-3 rounded-sm w-[100%]" placeholder="Country"></input>
+            <input ref={lineRef} type="text" required className="text-4xl focus:outline-1 focus:outline-[#c9c9c9] border-[1px] mb-4 py-4 px-3 rounded-sm w-[100%]" placeholder="Street/House No./Apartment"></input>
+            <input ref={postalCodeRef} required type="number" className="text-4xl focus:outline-1 focus:outline-[#c9c9c9] border-[1px] mb-4 py-1 px-3 rounded-sm w-[100%]" placeholder="Postal Code"></input>
+            <input ref={cityRef} required type="text" className="text-4xl focus:outline-1 focus:outline-[#c9c9c9] border-[1px] mb-4 py-1 px-3 rounded-sm w-[100%]" placeholder="City"></input>
+            <input ref={stateRef} required type="text" className="text-4xl focus:outline-1 focus:outline-[#c9c9c9] border-[1px] mb-4 py-1 px-3 rounded-sm w-[100%]" placeholder="State"></input>
+            <input ref={countryRef} required type="text" className="text-4xl focus:outline-1 focus:outline-[#c9c9c9] border-[1px] mb-4 py-1 px-3 rounded-sm w-[100%]" placeholder="Country"></input>
 
-            <div className="flex justify-end my-2 text-[18px]"><span className="font-semibold">Order Total :</span><span>&nbsp;{cartCtx.total_amount}₹</span></div>
+            <div className="flex justify-end my-5 text-4xl"><span className="font-semibold">Order Total :</span><span>&nbsp;{cartCtx.total_amount}₹</span></div>
 
             <div className="actions flex justify-end my-3">
-                <button onClick={hideOrderFormHandler} type="submit" className="py-1 mr-3 px-10 border-[1px] border-[#e9e9e980] bg-[#e9e9e980] text-[#555555] rounded-2xl max-[600px]:text-sm">Close</button>
-                <button type="submit" className="bg-[#F05941] py-1 px-10 text-white border-[1px] border-[#F05941] rounded-2xl max-[600px]:text-sm">Proceed</button> 
+                <button onClick={hideOrderFormHandler} type="submit" className="py-3 mr-3 px-10 border-[1px] border-[#e9e9e980] bg-[#e9e9e980] text-[#555555] text-4xl rounded-3xl">Close</button>
+                <button type="submit" className="bg-[#F05941] py-3 px-10 text-white border-[1px] border-[#F05941] text-4xl rounded-3xl">Proceed</button> 
             </div>
 
         </form>

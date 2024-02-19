@@ -57,29 +57,29 @@ function SearchPage() {
     }
 
   return (
-    <div className='min-h-[100vh]'>
-        <div className='mx-5 cursor-pointer text-[#404040] hover:text-[#f05941]' onClick={goToPrevPageHandler}><i className='bx bx-left-arrow-alt'></i>Go back</div>
+    <div className='flex-1'>
+        <div className='my-5 text-4xl mx-5 cursor-pointer text-[#404040] hover:text-[#f05941]' onClick={goToPrevPageHandler}><i className='bx bx-left-arrow-alt'></i>Go back</div>
       
       <form onSubmit={searchHandler} className='flex justify-center gap-x-1 mb-3'>
-        <input value={searchQuery} onChange={(e)=>setSearchQuery(e.target.value)} type='text' className='text-[#4a4a4a] py-1 px-5 rounded-lg bg-[#e1e1e1] outline-none max-[600px]:px-1' placeholder='Search something'></input>
-        <button className='border-[#f05941] bg-[#f05941] text-white border-[1px] rounded-2xl cursor-pointer py-1 px-5 hover:border-[#f4f4f4] hover:bg-[#f4f4f4] hover:text-[#686868] max-[600px]:text-sm max-[600px]:px-2'>Search</button>
+        <input value={searchQuery} onChange={(e)=>setSearchQuery(e.target.value)} type='text' className='text-[#4a4a4a] py-3 px-5 rounded-3xl text-4xl bg-[#e1e1e1] outline-none' placeholder='Search something'></input>
+        <button className='border-[#f05941] bg-[#f05941] text-white border-[1px] rounded-3xl cursor-pointer py-3 px-8 text-4xl hover:border-[#f4f4f4] hover:bg-[#f4f4f4] hover:text-[#686868]'>Search</button>
       </form>
 
-      <div className='mx-auto mt-4 w-[1400px] max-[392px]:w-[190px] max-[600px]:w-[370px] max-[700px]:w-[540px] max-[718px]:w-[100%] max-[1050px]:w-[720px] max-[1442px]:w-[1047px]'>
-        {isLoading && <div className='flex mx-4 flex-wrap gap-x-3 gap-y-2 justify-left'>
+      <div className='mx-auto my-7'>
+        {isLoading && <div className='flex mx-4 flex-wrap gap-x-1 gap-y-2 justify-left'>
             {Array(6).fill(0).map((item, ind) => {
                 return <CardSkeleton key={ind} />
             })}
             </div>
         }
         </div>
-        {!notFound && !isLoading && result.length === 0 && <div className='flex justify-center text-3xl text-[#f05941] mt-7'>Find your favourite meal!</div>}
+        {!notFound && !isLoading && result.length === 0 && <div className='flex justify-center text-5xl text-[#f05941] mt-7'>Find your favourite meal!</div>}
 
-        {!isLoading && notFound && <div className='flex justify-center text-3xl text-[#f05941] mt-7'>
+        {!isLoading && notFound && <div className='flex justify-center text-5xl text-[#f05941] mt-7'>
             {`No results found for '${notFoundTxt}'`}   
         </div>}
 
-        {!isLoading && result.length > 0 && <div className='flex mx-4 flex-wrap gap-x-3 gap-y-2 justify-center'>
+        {!isLoading && result.length > 0 && <div className='flex my-5 flex-wrap gap-x-1 gap-y-2 justify-center'>
             {result.map(item => <Card key={item._id} data={item} />)}    
         </div>}
 

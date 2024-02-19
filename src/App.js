@@ -177,7 +177,7 @@ const App = ()=>{
   }
 
   return (
-    <div className="app-container flex justify-between flex-col min-h-[100vh]:">
+    <div className="app-container flex justify-between flex-col min-h-[100dvh]">
 
     <HashRouter>
 

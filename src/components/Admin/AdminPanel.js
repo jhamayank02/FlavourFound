@@ -6,7 +6,7 @@ const AdminPanel = ()=>{
 
     return (
 
-        <div className="admin-container flex relative">
+        <div className="flex-1 admin-container flex relative">
                         <AdminNavigation />
                         <div className="w-[-webkit-fill-available] ml-3">
                             <Outlet></Outlet>

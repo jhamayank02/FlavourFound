@@ -81,7 +81,7 @@ function Admins(props) {
 
   return (
     <div>
-        <h1 className='text-3xl mt-2 mb-4 text-[#484b4bf2] text-center underline'>Users With Admin Rights</h1>
+        <h1 className='text-6xl mt-2 mb-12 text-[#484b4bf2] text-center underline'>Users With Admin Rights</h1>
 
         {loading && <Loading />}
         {!loading && <Table fetchDetails={fetchUserDetails} columns={columns} data={data} />}

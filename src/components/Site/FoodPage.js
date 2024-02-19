@@ -96,80 +96,80 @@ const FoodPage = (props)=>{
             .catch(err=>notificationCtx.showNotification(true, err.message))
     }, [])
 
-    return <div className="food-page w-[100%]">
-        <div className='mx-5 cursor-pointer text-[#404040] hover:text-[#f05941]' onClick={goToPrevPageHandler}><i className='bx bx-left-arrow-alt'></i>Go back</div>
-        <div className="flex justify-center py-5 px-4 max-[600px]:flex-wrap">
+    return <div className="food-page w-[100%] flex-1">
+        <div className='my-5 text-4xl mx-5 cursor-pointer text-[#404040] hover:text-[#f05941]' onClick={goToPrevPageHandler}><i className='bx bx-left-arrow-alt text-4xl'></i>Go back</div>
+        <div className="flex flex-col justify-center py-5 px-4">
 
-            <div className="food-imgs-section w-[400px] h-[500px] border-[1px] border-[#dfdfdf] overflow-hidden rounded-2xl">
+            <div className="food-imgs-section w-[100%] h-[920px] border-[1px] border-[#dfdfdf] overflow-hidden rounded-2xl">
 
-                {isLoading && <Skeleton height={400} />}
-                {!isLoading && foodDetails.images !== undefined && <img src={imgDisplay} alt="Food Image" className="h-[400px] w-full object-cover"></img>}
+                {isLoading && <Skeleton height={750} />}
+                {!isLoading && foodDetails.images !== undefined && <img src={imgDisplay} alt="Food Image" className="h-[750px] w-full object-cover"></img>}
 
                 <div className="related-imgs p-2">
                     <ul className="flex gap-x-1">
-                        {isLoading && Array(3).fill(0).map((item,ind)=> {return <Skeleton height={80} width={70} key={ind} />})}
+                        {isLoading && Array(3).fill(0).map((item,ind)=> {return <Skeleton height={150} width={180} key={ind} />})}
                         {!isLoading && foodDetails.images !== undefined && foodDetails.images.map((img,ind)=>{
-                        return <li key={ind}><img onClick={()=>setImgDisplay(img.img_url)} src={img.img_url} alt="Food Image" className="h-[80px] w-[70px] object-cover rounded border-[1px] border-[#f05941]"></img></li>
+                        return <li key={ind}><img onClick={()=>setImgDisplay(img.img_url)} src={img.img_url} alt="Food Image" className="h-[150px] w-[180px] object-cover rounded border-[1px] border-[#f05941]"></img></li>
                         })}
                     </ul>
                 </div>
             </div>
 
-            <div className="other-details px-3 ml-4 w-[500px] max-[600px]:w-[100%] max-[600px]:px-0 max-[600px]:ml-0 max-[600px]:mt-3">
+            <div className="other-details ml-4 mt-6">
 
-                <h1 className="text-3xl text-[#2d2d2de8]">
+                <h1 className="text-6xl text-[#2d2d2de8] mb-2">
                     {isLoading && <Skeleton />}
                     {!isLoading && foodDetails.name}
                 </h1>
-                <span className="text-2xl font-semibold text-[#f05941]">
+                <span className="text-5xl font-semibold text-[#f05941]">
                     {isLoading && <Skeleton width={100} />}
                     {!isLoading && foodDetails.price+'₹'}
                 </span>
 
-                {isLoading && <div className="flex">
+                {isLoading && <div className="flex gap-x-1">
                     {Array(5).fill(0).map((item,ind)=>{
-                        return <Skeleton circle={true} height={30} width={30} />
+                        return <Skeleton circle={true} height={60} width={60} />
                     })}
                 </div>}
 
-                {!isLoading && <div className="ratings">
+                {!isLoading && <div className="ratings mt-2">
                     {Array(foodDetails.averageRating).fill(0).map(()=>{
-                        return <i className='bx bxs-star text-[#0f9c00]'></i>
+                        return <i className='bx bxs-star text-[#0f9c00] text-4xl'></i>
                     })}
                     {Array(5-foodDetails.averageRating).fill(0).map(()=>{
-                        return <i className='bx bx-star text-[#0000008c]'></i>
+                        return <i className='bx bx-star text-[#0000008c] text-4xl'></i>
                     })}
                 </div>}
 
                 <ul className="mt-3">
-                    <h1 className="text-xl text-[#2d2d2de8]">
+                    <h1 className="text-5xl mb-2 text-[#2d2d2de8]">
                         {isLoading && <Skeleton width={150} />}
                         {!isLoading && 'Ingredients'}
                     </h1>
-                    {isLoading && Array(3).fill(0).map((item,ind)=> {return <Skeleton key={ind} />})}
-                    {!isLoading && foodDetails.ingredients !== undefined && foodDetails.ingredients.map((ingredient,ind)=>{
-                        return <li key={ind} className="text-sm pl-2 text-[#404040]">{ingredient}</li>
+                    {isLoading && Array(3).fill(0).map((item,ind)=> {return <Skeleton height={30} key={ind} />})}
+                    {!isLoading && foodDetails.ingredients !== undefined && foodDetails.ingredients[0].split(',').map((ingredient,ind)=>{
+                        return <li key={ind} className="pl-2 text-3xl text-[#404040]">{ind+1}. {ingredient}</li>
                     })}
                 </ul>
 
-                {isLoading && <Skeleton count={3} />}
-                {!isLoading && foodDetails.description && <div className="description mt-3"><span className="text-xl text-[#2d2d2de8]">Description : </span><span className="text-[#2d2d2de8]">{foodDetails.description}</span></div>}
+                {isLoading && <Skeleton height={30} count={3} />}
+                {!isLoading && foodDetails.description && <div className="description mt-3"><div className="text-5xl text-[#2d2d2de8] mb-2">Description</div><div className="text-3xl text-[#2d2d2de8]">{foodDetails.description}</div></div>}
                 
 
                 <div className="actions mt-3">
-                    {isLoading && <div className='flex'><Skeleton height={40} width={300} /></div>}
+                    {isLoading && <div className='flex'><Skeleton height={40} width={200} /></div>}
                     {!isLoading && 
                     <>
-                    {quantity > 0 && <button onClick={removeFromCartHandler} className="mt-2 mr-2 bg-[#F05941] py-1 px-4 text-white border-[1px] border-[#F05941] rounded-2xl hover:bg-white hover:text-[#F05941] hover:border-[#F05941]">-</button>}
-                    {quantity === 0 && <button onClick={addToCartHandler} className="mt-2 mr-2 bg-[#F05941] py-1 px-10 text-white border-[1px] border-[#F05941] rounded-2xl">Add to Cart</button>}
-                    {quantity > 0 && <button className="py-1 px-5 mr-2  border-[1px] border-[#e9e9e980] bg-[#e9e9e980] text-[#555555] rounded-2xl cursor-not-allowed">Added to Cart ({quantity})</button>}
-                    {quantity >= 1 && <button onClick={addToCartHandler} className="mt-2 bg-[#F05941] py-1 px-4 text-white border-[1px] border-[#F05941] rounded-2xl hover:bg-white hover:text-[#F05941] hover:border-[#F05941]">+</button>}
+                    {quantity > 0 && <button onClick={removeFromCartHandler} className="mt-2 mr-2 bg-[#F05941] py-3 px-7 text-3xl text-white border-[1px] border-[#F05941] rounded-3xl hover:bg-white hover:text-[#F05941] hover:border-[#F05941]">-</button>}
+                    {quantity === 0 && <button onClick={addToCartHandler} className="mt-2 mr-2 bg-[#F05941] py-3 px-10 text-white border-[1px] border-[#F05941] rounded-3xl text-3xl">Add to Cart</button>}
+                    {quantity > 0 && <button className="py-3 px-7 text-3xl mr-2  border-[1px] border-[#e9e9e980] bg-[#e9e9e980] text-[#555555] rounded-3xl cursor-not-allowed">Added to Cart ({quantity})</button>}
+                    {quantity >= 1 && <button onClick={addToCartHandler} className="mt-2 bg-[#F05941] py-3 px-7 text-3xl text-white border-[1px] border-[#F05941] rounded-3xl hover:bg-white hover:text-[#F05941] hover:border-[#F05941]">+</button>}
                     </>}
                 </div>
 
-                <div className="reviews">
-                    <h1 className="text-2xl mt-3 mb-2 text-[#2d2d2de8]">
-                        {isLoading && <Skeleton width={150} />}
+                <div className="reviews mt-10">
+                    <h1 className="text-5xl mt-3 mb-4 text-[#2d2d2de8]">
+                        {isLoading && <Skeleton width={250} />}
                         {!isLoading && 'Reviews'}
                     </h1>
                     
@@ -177,9 +177,9 @@ const FoodPage = (props)=>{
                     {!isLoading && <>
 
                     {authCtx.authenticated && <form onSubmit={ratingFormSubmitHandler} className='mb-3'>
-                        <textarea ref={ratingFeedbackInputRef} rows="4" required className="focus:outline-1 focus:outline-[#c9c9c9] border-[1px] py-1 px-3 rounded-sm w-[100%] resize-none" placeholder="Did you like it? Share your thoughts."></textarea>
+                        <textarea ref={ratingFeedbackInputRef} rows="4" required className="focus:outline-1 focus:outline-[#c9c9c9] border-[1px] py-1 px-3 rounded-sm w-[100%] resize-none text-3xl" placeholder="Did you like it? Share your thoughts."></textarea>
 
-                        <div className='text-lg'>
+                        <div className='text-3xl'>
                             <span className='text-[#2d2d2de8]'>Leave a rating : </span>
                             <span className="mr-1">
                                 <input onClick={ratingChangeHandler} required hidden id="rating-1" name='rating' value="1" type='radio'></input>
@@ -203,7 +203,7 @@ const FoodPage = (props)=>{
                             </span>
                         </div>
 
-                        <button type="submit" className="mt-1 bg-[#F05941] mr-3 py-1 px-10 text-white border-[1px] border-[#F05941] rounded-sm w-[100%] hover:border-[#e9e9e980] hover:bg-[#e9e9e980] hover:text-[#555555]">Submit</button>
+                        <button type="submit" className="mt-4 bg-[#F05941] mr-3 py-3 px-10 text-white border-[1px] border-[#F05941] rounded-sm w-[100%] hover:border-[#e9e9e980] hover:bg-[#e9e9e980] hover:text-[#555555] text-3xl">Submit</button>
                     </form>}
 
                     <Reviews reviews={foodDetails.reviews !== undefined ? foodDetails.reviews : []} />

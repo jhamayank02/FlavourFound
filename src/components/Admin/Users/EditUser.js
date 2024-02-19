@@ -43,22 +43,22 @@ function EditUser(props) {
   return (
     <>
       <Modal hideModal={hideEditUserModal}>
-          <h1 className='text-3xl mt-2 mb-4 text-[#484b4bf2] text-center underline'>Edit user</h1>
+          <h1 className='text-6xl mt-2 mb-12 text-[#484b4bf2] text-center underline'>Edit user</h1>
 
-          <form onSubmit={formSubmitHandler} className='w-[400px] mx-auto max-[600px]:w-[90%]'>
+          <form onSubmit={formSubmitHandler} className='w-[90%] mx-auto'>
 
-            <label className='text-[#515454]'>User id</label>
-            <input disabled ref={userIdRef} type="text" required className="focus:outline-1 focus:outline-[#c9c9c9] border-[1px] mb-2 py-1 px-3 rounded-sm w-[100%] bg-[#c1c0bf99] cursor-not-allowed"></input>
+            <label className='text-3xl text-[#515454]'>User id</label>
+            <input disabled ref={userIdRef} type="text" required className="focus:outline-1 focus:outline-[#c9c9c9] border-[1px] mb-4 text-4xl py-4 px-3 rounded-md w-[100%] bg-[#c1c0bf99] cursor-not-allowed"></input>
 
-            <label className='text-[#515454]'>Admin rights (true/false)</label>
-            <input ref={adminRightsRef} type="text" required className="focus:outline-1 focus:outline-[#c9c9c9] border-[1px] mb-2 py-1 px-3 rounded-sm w-[100%]"></input>
+            <label className='text-3xl text-[#515454]'>Admin rights (true/false)</label>
+            <input ref={adminRightsRef} type="text" required className="focus:outline-1 focus:outline-[#c9c9c9] border-[1px] mb-4 text-4xl py-4 px-3 rounded-md w-[100%]"></input>
 
-            <label className='text-[#515454]'>Contact no.</label>
-            <input ref={contactNoRef} type="text" required className="focus:outline-1 focus:outline-[#c9c9c9] border-[1px] mb-2 py-1 px-3 rounded-sm w-[100%]"></input>
+            <label className='text-3xl text-[#515454]'>Contact no.</label>
+            <input ref={contactNoRef} type="text" required className="focus:outline-1 focus:outline-[#c9c9c9] border-[1px] mb-4 text-4xl py-4 px-3 rounded-md w-[100%]"></input>
 
             <div className='flex justify-end mt-2'>
-              <button onClick={hideEditUserModal} className="mt-2 mr-2 #515454 py-1 px-4 border-[1px] border-[#515454] rounded-2xl hover:bg-[#484b4bf2] hover:text-white">Close</button>
-              <button className="mt-2 mr-2 #515454 py-1 px-4  border-[1px] border-[#515454] rounded-2xl hover:bg-[#484b4bf2] hover:text-white">Update</button>
+              <button onClick={hideEditUserModal} className="mt-2 mr-2 text-4xl py-4 px-10 border-[1px] border-[#515454] rounded-3xl hover:bg-[#484b4bf2] hover:text-white">Close</button>
+              <button className="mt-2 mr-2 text-4xl py-4 px-10  border-[1px] border-[#515454] rounded-3xl hover:bg-[#484b4bf2] hover:text-white">Update</button>
             </div>
 
           </form>

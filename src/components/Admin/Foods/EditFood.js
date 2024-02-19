@@ -73,26 +73,26 @@ function EditFood(props) {
   return (
     <>
       <Modal hideModal={hideEditFoodModal}>
-          <h1 className='text-3xl mt-2 mb-4 text-[#484b4bf2] text-center underline'>Edit food item</h1>
+          <h1 className='text-6xl mt-2 mb-12 text-[#484b4bf2] text-center underline'>Edit food item</h1>
 
-          <form onSubmit={formSubmitHandler} className='w-[400px] mx-auto max-[600px]:w-[90%]'>
+          <form onSubmit={formSubmitHandler} className='mx-auto w-[90%]'>
 
-            <label className='text-[#515454]'>Food id</label>
-            <input disabled ref={foodIdRef} type="text" required className="focus:outline-1 focus:outline-[#c9c9c9] border-[1px] mb-2 py-1 px-3 rounded-sm w-[100%] bg-[#c1c0bf99] cursor-not-allowed"></input>
+            <label className='text-3xl text-[#515454]'>Food id</label>
+            <input disabled ref={foodIdRef} type="text" required className="focus:outline-1 focus:outline-[#c9c9c9] border-[1px] mb-2 py-4 text-4xl px-3 rounded-md w-[100%] bg-[#c1c0bf99] cursor-not-allowed"></input>
 
-            <label className='text-[#515454]'>Description</label>
-            <input ref={descriptionRef} type="text" required className="focus:outline-1 focus:outline-[#c9c9c9] border-[1px] mb-2 py-1 px-3 rounded-sm w-[100%]"></input>
+            <label className='text-3xl text-[#515454]'>Description</label>
+            <input ref={descriptionRef} type="text" required className="focus:outline-1 focus:outline-[#c9c9c9] border-[1px] mb-2 py-4 text-4xl px-3 rounded-md w-[100%]"></input>
 
-            <label className='text-[#515454]'>Stock</label>
-            <input ref={stockRef} type="text" required className="focus:outline-1 focus:outline-[#c9c9c9] border-[1px] mb-2 py-1 px-3 rounded-sm w-[100%]"></input>
+            <label className='text-3xl text-[#515454]'>Stock</label>
+            <input ref={stockRef} type="text" required className="focus:outline-1 focus:outline-[#c9c9c9] border-[1px] mb-2 py4 text-4xl px-3 rounded-md w-[100%]"></input>
             
-            <label className='text-[#515454]'>Price</label>
-            <input ref={priceRef} type="number" required className="focus:outline-1 focus:outline-[#c9c9c9] border-[1px] mb-2 py-1 px-3 rounded-sm w-[100%]"></input>
+            <label className='text-3xl text-[#515454]'>Price</label>
+            <input ref={priceRef} type="number" required className="focus:outline-1 focus:outline-[#c9c9c9] border-[1px] mb-2 py-4 text-4xl px-3 rounded-md w-[100%]"></input>
 
             <div className='flex justify-end mt-2'>
-              <button onClick={hideEditFoodModal} className="mt-2 mr-2 #515454 py-1 px-4 border-[1px] border-[#515454] rounded-2xl hover:bg-[#484b4bf2] hover:text-white">Close</button>
-              <button className="mt-2 mr-2 #515454 py-1 px-4  border-[1px] border-[#515454] rounded-2xl hover:bg-[#484b4bf2] hover:text-white">Update</button>
-              <button onClick={deleteFoodHandler} className="mt-2 mr-2 #515454 py-1 px-4  border-[1px] border-[#515454] rounded-2xl hover:bg-[#484b4bf2] hover:text-white">Delete</button>
+              <button onClick={hideEditFoodModal} className="mt-2 mr-2 py-4 text-4xl px-10 border-[1px] border-[#515454] rounded-3xl hover:bg-[#484b4bf2] hover:text-white">Close</button>
+              <button className="mt-2 mr-2 py-4 text-4xl px-10  border-[1px] border-[#515454] rounded-3xl hover:bg-[#484b4bf2] hover:text-white">Update</button>
+              <button onClick={deleteFoodHandler} className="mt-2 mr-2 py-4 text-4xl px-10  border-[1px] border-[#515454] rounded-3xl hover:bg-[#484b4bf2] hover:text-white">Delete</button>
             </div>
 
           </form>

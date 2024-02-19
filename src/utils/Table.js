@@ -13,7 +13,7 @@ const Table = (props) => {
         <div className='overflow-scroll'>
         <table className='text-justify w-[80%] m-auto border-[1px] border-[#515454]' {...getTableProps()}>
 
-            <thead className='bg-[#515454] text-white font-[400]'>
+            <thead className='bg-[#515454] text-4xl text-white font-[400]'>
                 {headerGroups.map(hg => {
                     return <tr {...hg.getHeaderGroupProps()}>
                         {
@@ -33,7 +33,7 @@ const Table = (props) => {
                     page.map(row=>{
                         prepareRow(row);
 
-                        return (<tr onClick={()=>fetchDetails !== undefined && fetchDetails(row.cells[0].value)} className='hover:bg-[#e4e4e4] hover:cursor-pointer' {...row.getRowProps()}>
+                        return (<tr onClick={()=>fetchDetails !== undefined && fetchDetails(row.cells[0].value)} className='text-4xl hover:bg-[#e4e4e4] hover:cursor-pointer' {...row.getRowProps()}>
                             {
                                 row.cells.map(cell=>{
                                     return <td className='font-[300] border-r-[1px] border-b-[1px] border-[#515454] px-3 py-2' {...cell.getCellProps()}>
@@ -48,10 +48,10 @@ const Table = (props) => {
 
         </table>
         </div>  
-        <div className='w-[max-content] m-auto mt-4'>
-            <button className="mt-2 mr-2 bg-[#515454] py-1 px-4 text-white border-[1px] border-[#515454] rounded-2xl disabled:bg-[#b2b2b2] disabled:border-[#b2b2b2] disabled:cursor-not-allowed" disabled={!canPreviousPage} onClick={previousPage}>Prev</button>
-            <span className='mx-3'>{pageIndex+1} of {pageCount}</span>
-            <button className="mt-2 mr-2 bg-[#515454] py-1 px-4 text-white border-[1px] border-[#515454] rounded-2xl disabled:bg-[#b2b2b2] disabled:border-[#b2b2b2] disabled:cursor-not-allowed" disabled={!canNextPage} onClick={nextPage}>Next</button>
+        <div className='w-[max-content] m-auto my-7'>
+            <button className="text-4xl mt-2 mr-2 bg-[#515454] py-4 px-10 text-white border-[1px] border-[#515454] rounded-3xl disabled:bg-[#b2b2b2] disabled:border-[#b2b2b2] disabled:cursor-not-allowed" disabled={!canPreviousPage} onClick={previousPage}>Prev</button>
+            <span className='mx-3 text-4xl'>{pageIndex+1} of {pageCount}</span>
+            <button className="text-4xl mt-2 mr-2 bg-[#515454] py-4 px-10 text-white border-[1px] border-[#515454] rounded-3xl disabled:bg-[#b2b2b2] disabled:border-[#b2b2b2] disabled:cursor-not-allowed" disabled={!canNextPage} onClick={nextPage}>Next</button>
         </div>
     </div>
     )

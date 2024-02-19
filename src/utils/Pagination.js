@@ -11,7 +11,7 @@ const Pagination = ({totalPages, currPage, paginate}) => {
     <div>
       
       {pages.map((page)=> {
-            return <span key={page} onClick={() => paginate(page)} className={`${page === currPage ? 'border-[#f05941] bg-[#f05941] text-white' : 'border-[#f4f4f4] bg-[#f4f4f4] text-[#686868]'} rounded-2xl border-[1px] cursor-pointer py-1 px-5 mr-2`}>{page}</span>
+            return <span key={page} onClick={() => paginate(page)} className={`${page === currPage ? 'border-[#f05941] bg-[#f05941] text-white' : 'border-[#f4f4f4] bg-[#f4f4f4] text-[#686868]'} rounded-3xl border-[1px] cursor-pointer py-3 px-8 text-3xl mr-2`}>{page}</span>
       })}
 
     </div>

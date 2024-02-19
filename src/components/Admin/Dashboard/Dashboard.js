@@ -29,9 +29,9 @@ function Dashboard(props) {
 
   return (
     <div>
-      <h1 className='text-3xl mt-2 mb-4 text-[#484b4bf2] text-center underline'>Admin Dashboard</h1>
+      <h1 className='text-6xl mt-2 mb-12 text-[#484b4bf2] text-center underline'>Admin Dashboard</h1>
 
-      <h2 className='text-2xl mt-2 mb-4 text-[#484b4bf2]'>Business Summary</h2>
+      <h2 className='text-5xl mt-2 mb-7 text-[#484b4bf2]'>Business Summary</h2>
       <div className='flex flex-wrap gap-x-3'>
         <DashboardCard heading={"Total Registered Users"} value={dashboardData.total_users} iconClass={"bx bxs-user-rectangle"} />
         <DashboardCard heading={"Users With Admin Rights"} value={dashboardData.admin_rights} iconClass={'bx bxs-user-check'} />
