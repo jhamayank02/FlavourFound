@@ -46,7 +46,7 @@ function MyOrders({hideMyOrdersModal}) {
             return <OrdersCardSkeleton key={ind} />
         })}
 
-        {!isLoading && orderedItems.length === 0 && <h1 className="text-5xl mb-2 text-[#2d2d2de8]">You do not have any past orders.</h1>}
+        {!isLoading && orderedItems.length === 0 && <h1 className="text-5xl mb-2 text-[#2d2d2de8] sm:text-4xl lg:text-3xl xl:text-xl">You do not have any past orders.</h1>}
         {!isLoading && orderedItems.length > 0 && orderedItems.map((item)=>{
             return <div key={item._id} className='mb-1 border-[1px] border-[#dbdbdb] py-3 px-3 rounded xl:py-1'>
                 <div className='text-[#000000b8] flex text-4xl sm:text-3xl xl:text-lg flex items-start'>

@@ -115,6 +115,7 @@ const App = ()=>{
   const [cartIsShown, setCartIsShown] = useState(false);
 
   const showCartHandler = ()=>{
+    setNavigationIsShown(false);
     setCartIsShown(true);
   }
 
@@ -125,6 +126,7 @@ const App = ()=>{
   const [loginIsShown, setLoginIsShown] = useState(false);
 
   const showLoginHandler = ()=>{
+    setNavigationIsShown(false);
     setLoginIsShown(true);
   }
 
@@ -169,6 +171,7 @@ const App = ()=>{
   const [myOrdersIsShown, setMyOrdersIsShown] = useState(false);
 
   const showMyOrdersHandler = ()=>{
+    setNavigationIsShown(false);
     setMyOrdersIsShown(true);
   }
 
