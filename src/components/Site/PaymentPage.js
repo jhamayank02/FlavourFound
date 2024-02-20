@@ -34,10 +34,10 @@ function PaymentPage() {
 
   return (
     <div className='flex-1'>
-        <div className='my-5 text-4xl mx-5 cursor-pointer text-[#404040] hover:text-[#f05941]' onClick={goToPrevPageHandler}><i className='bx bx-left-arrow-alt'></i>Go back</div>
+        <div className='my-5 text-4xl mx-5 cursor-pointer text-[#404040] hover:text-[#f05941] sm:text-3xl md:text-2xl lg:text-xl' onClick={goToPrevPageHandler}><i className='bx bx-left-arrow-alt'></i>Go back</div>
 
-        <div className='w-[90%] mx-auto mt-2'>
-            <h1 className='text-6xl mb-12 text-[#2d2d2de8]'>Checkout Page</h1>
+        <div className='w-[90%] mx-auto mt-2 xl:w-[450px]'>
+            <h1 className='text-6xl mb-12 text-[#2d2d2de8] sm:text-5xl lg:text-4xl'>Checkout Page</h1>
             {stripePromise && clientSecret && <Elements stripe={stripePromise} options={{clientSecret}}>
                 <CheckoutForm />
             </Elements>}

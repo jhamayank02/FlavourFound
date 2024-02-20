@@ -60,27 +60,27 @@ function AddFood(props) {
 
   return (
     <div>
-        <h1 className='text-6xl mt-2 mb-12 text-[#484b4bf2] text-center underline'>Add A Food Item</h1>
+        <h1 className='text-6xl mt-2 mb-12 text-[#484b4bf2] text-center underline sm:text-5xl lg:text-4xl lg:mb-8 xl:text-3xl xl:mb-6'>Add A Food Item</h1>
 
-        <form onSubmit={formSubmitHandler} className='w-[90%]'>
+        <form onSubmit={formSubmitHandler} className='w-[90%] mx-auto lg:w-[70%] xl:w-[550px]'>
 
-          <input ref={nameRef} type="text" required className="text-4xl focus:outline-1 focus:outline-[#c9c9c9] border-[1px] mb-2 py-4 px-3 rounded-sm w-[100%]" placeholder="Enter name"></input>
+          <input ref={nameRef} type="text" required className="text-4xl focus:outline-1 focus:outline-[#c9c9c9] border-[1px] mb-2 py-4 px-3 rounded-sm w-[100%] sm:text-3xl sm:py-3 sm:mb-1 lg:text-2xl lg:py-2 xl:text-base xl:py-1" placeholder="Enter name"></input>
 
-          <input ref={descRef} type="text" required className="text-4xl focus:outline-1 focus:outline-[#c9c9c9] border-[1px] mb-2 py-4 px-3 rounded-sm w-[100%]" placeholder="Enter description"></input>
+          <input ref={descRef} type="text" required className="text-4xl focus:outline-1 focus:outline-[#c9c9c9] border-[1px] mb-2 py-4 px-3 rounded-sm w-[100%] sm:text-3xl sm:py-3 sm:mb-1 lg:text-2xl lg:py-2 xl:text-base xl:py-1" placeholder="Enter description"></input>
 
-          <input ref={priceRef} type="number" required className="text-4xl focus:outline-1 focus:outline-[#c9c9c9] border-[1px] mb-2 py-4 px-3 rounded-sm w-[100%]" placeholder="Enter price (in ₹)"></input>
+          <input ref={priceRef} type="number" required className="text-4xl focus:outline-1 focus:outline-[#c9c9c9] border-[1px] mb-2 py-4 px-3 rounded-sm w-[100%] sm:text-3xl sm:py-3 sm:mb-1 lg:text-2xl lg:py-2 xl:text-base xl:py-1" placeholder="Enter price (in ₹)"></input>
 
-          <input ref={stockRef} type="number" required className="text-4xl focus:outline-1 focus:outline-[#c9c9c9] border-[1px] mb-2 py-4 px-3 rounded-sm w-[100%]" placeholder="Enter stock"></input>
+          <input ref={stockRef} type="number" required className="text-4xl focus:outline-1 focus:outline-[#c9c9c9] border-[1px] mb-2 py-4 px-3 rounded-sm w-[100%] sm:text-3xl sm:py-3 sm:mb-1 lg:text-2xl lg:py-2 xl:text-base xl:py-1" placeholder="Enter stock"></input>
 
-          <input ref={ingredientsRef} type="text" required className="text-4xl focus:outline-1 focus:outline-[#c9c9c9] border-[1px] mb-2 py-4 px-3 rounded-sm w-[100%]" placeholder="Enter ingredients"></input>
+          <input ref={ingredientsRef} type="text" required className="text-4xl focus:outline-1 focus:outline-[#c9c9c9] border-[1px] mb-2 py-4 px-3 rounded-sm w-[100%] sm:text-3xl sm:py-3 sm:mb-1 lg:text-2xl lg:py-2 xl:text-base xl:py-1" placeholder="Enter ingredients"></input>
           
-          <input ref={categoryRef} type="text" required className="text-4xl focus:outline-1 focus:outline-[#c9c9c9] border-[1px] mb-2 py-4 px-3 rounded-sm w-[100%]" placeholder="Enter category"></input>
+          <input ref={categoryRef} type="text" required className="text-4xl focus:outline-1 focus:outline-[#c9c9c9] border-[1px] mb-2 py-4 px-3 rounded-sm w-[100%] sm:text-3xl sm:py-3 sm:mb-1 lg:text-2xl lg:py-2 xl:text-base xl:py-1" placeholder="Enter category"></input>
 
-          <input ref={imagesRef} multiple type="file" accept='image/*' required className="focus:outline-1 focus:outline-[#c9c9c9] border-[1px] mb-2 text-4xl py-4 px-3 rounded-sm w-[100%]"></input>
+          <input ref={imagesRef} multiple type="file" accept='image/*' required className="focus:outline-1 focus:outline-[#c9c9c9] border-[1px] mb-2 text-4xl py-4 px-3 rounded-sm w-[100%] lg:text-2xl lg:py-2 xl:text-base xl:py-1"></input>
 
           <div className='flex justify-end mt-2'>
-            <button type='reset' className="text-4xl mt-2 mr-2 #515454 py-3 px-10 border-[1px] border-[#515454] rounded-3xl hover:bg-[#484b4bf2] hover:text-white">Reset</button>
-            <button className="text-4xl mt-2 mr-2 #515454 py-3 px-10  border-[1px] border-[#515454] rounded-3xl hover:bg-[#484b4bf2] hover:text-white">Add</button>
+            <button type='reset' className="text-4xl mt-2 mr-2 #515454 py-3 px-10 border-[1px] border-[#515454] rounded-3xl hover:bg-[#484b4bf2] hover:text-white sm:py-2 sm:text-3xl lg:text-2xl lg:py-1 lg:px-6 xl:text-base xl:py-1">Reset</button>
+            <button className="text-4xl mt-2 mr-2 #515454 py-3 px-10  border-[1px] border-[#515454] rounded-3xl hover:bg-[#484b4bf2] hover:text-white sm:py-2 sm:text-3xl lg:text-2xl lg:py-1 lg:px-6 xl:text-base xl:py-1">Add</button>
           </div>
 
         </form>

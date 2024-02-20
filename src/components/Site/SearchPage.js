@@ -58,11 +58,11 @@ function SearchPage() {
 
   return (
     <div className='flex-1'>
-        <div className='my-5 text-4xl mx-5 cursor-pointer text-[#404040] hover:text-[#f05941]' onClick={goToPrevPageHandler}><i className='bx bx-left-arrow-alt'></i>Go back</div>
+        <div className='my-5 text-4xl mx-5 cursor-pointer text-[#404040] hover:text-[#f05941]sm:text-3xl md:text-2xl lg:text-xl xl:text-xl xl:my-1' onClick={goToPrevPageHandler}><i className='bx bx-left-arrow-alt'></i>Go back</div>
       
       <form onSubmit={searchHandler} className='flex justify-center gap-x-1 mb-3'>
-        <input value={searchQuery} onChange={(e)=>setSearchQuery(e.target.value)} type='text' className='text-[#4a4a4a] py-3 px-5 rounded-3xl text-4xl bg-[#e1e1e1] outline-none' placeholder='Search something'></input>
-        <button className='border-[#f05941] bg-[#f05941] text-white border-[1px] rounded-3xl cursor-pointer py-3 px-8 text-4xl hover:border-[#f4f4f4] hover:bg-[#f4f4f4] hover:text-[#686868]'>Search</button>
+        <input value={searchQuery} onChange={(e)=>setSearchQuery(e.target.value)} type='text' className='text-[#4a4a4a] py-3 px-5 rounded-3xl text-4xl bg-[#e1e1e1] outline-none sm:text-3xl sm:py-2 md:text-2xl xl:text-lg xl:py-1' placeholder='Search something'></input>
+        <button className='border-[#f05941] bg-[#f05941] text-white border-[1px] rounded-3xl cursor-pointer py-3 px-8 text-4xl hover:border-[#f4f4f4] hover:bg-[#f4f4f4] hover:text-[#686868] sm:py-2 sm:text-3xl md:text-2xl xl:text-lg xl:py-1 xl:px-5'>Search</button>
       </form>
 
       <div className='mx-auto my-7'>
@@ -73,13 +73,13 @@ function SearchPage() {
             </div>
         }
         </div>
-        {!notFound && !isLoading && result.length === 0 && <div className='flex justify-center text-5xl text-[#f05941] mt-7'>Find your favourite meal!</div>}
+        {!notFound && !isLoading && result.length === 0 && <div className='flex justify-center text-5xl text-[#f05941] mt-7 md:text-4xl xl:text-3xl'>Find your favourite meal!</div>}
 
-        {!isLoading && notFound && <div className='flex justify-center text-5xl text-[#f05941] mt-7'>
+        {!isLoading && notFound && <div className='flex justify-center text-5xl text-[#f05941] mt-7 mt-7 md:text-4xl xl:text-3xl'>
             {`No results found for '${notFoundTxt}'`}   
         </div>}
 
-        {!isLoading && result.length > 0 && <div className='flex my-5 flex-wrap gap-x-1 gap-y-2 justify-center'>
+        {!isLoading && result.length > 0 && <div className='flex my-5 flex-wrap gap-x-1 gap-y-2 mx-auto justify-start md:w-[910px] xl:w-[1226px]'>
             {result.map(item => <Card key={item._id} data={item} />)}    
         </div>}
 

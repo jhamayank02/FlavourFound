@@ -3,7 +3,7 @@ import Card from '../ui/Card';
 import CardSkeleton from '../ui/skeletons/CardSkeleton';
 
 function PaginationItems({items, isLoading}) {
-    return <div className='flex flex-wrap gap-y-2 gap-x-2'>
+    return <div className='flex flex-wrap gap-y-2 gap-x-2 mx-auto md:w-[917px] xl:w-[1226px]'>
         {isLoading && Array(6).fill(0).map((item, ind) => {
             return <CardSkeleton key={ind} />
         })}

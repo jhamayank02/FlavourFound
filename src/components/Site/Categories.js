@@ -53,20 +53,20 @@ const Categories = ()=>{
 
             <div className="categories-content">
 
-                <h1 className="text-6xl mb-5 text-center font-normal">Order whatever you want!</h1>
+                <h1 className="text-6xl mb-5 text-center font-normal sm:text-5xl lg:text-4xl">Order whatever you want!</h1>
 
                 <div className="category-menu">
                     <ul className="mt-3 flex justify-center items-center gap-x-[10px]">
-                        <li onClick={() => setCategory('')} className={`${category === '' ? 'border-[#f05941] bg-[#f05941] text-white' : 'border-[#f4f4f4] bg-[#f4f4f4] text-[#686868]'} border-[1px] rounded-[30px] cursor-pointer py-3 px-8 text-3xl`}><a>All</a></li>
-                        <li onClick={() => setCategory('indian')} className={`${category === 'indian' ? 'border-[#f05941] bg-[#f05941] text-white' : 'border-[#f4f4f4] bg-[#f4f4f4] text-[#686868]'} border-[1px] rounded-[30px] cursor-pointer py-3 px-8 text-3xl`}><a>Indian</a></li>
-                        <li onClick={() => setCategory('mexican')} className={`${category === 'mexican' ? 'border-[#f05941] bg-[#f05941] text-white' : 'border-[#f4f4f4] bg-[#f4f4f4] text-[#686868]'} border-[1px] rounded-[30px] cursor-pointer py-3 px-8 text-3xl`}><a>Mexican</a></li>
-                        <li onClick={() => setCategory('chinese')} className={`${category === 'chinese' ? 'border-[#f05941] bg-[#f05941] text-white' : 'border-[#f4f4f4] bg-[#f4f4f4] text-[#686868]'} border-[1px] rounded-[30px] cursor-pointer py-3 px-8 text-3xl`}><a>Chinese</a></li>
-                        <li onClick={() => setCategory('italian')} className={`${category === 'italian' ? 'border-[#f05941] bg-[#f05941] text-white' : 'border-[#f4f4f4] bg-[#f4f4f4] text-[#686868]'} border-[1px] rounded-[30px] cursor-pointer py-3 px-8 text-3xl`}><a>Italian</a></li>
+                        <li onClick={() => setCategory('')} className={`${category === '' ? 'border-[#f05941] bg-[#f05941] text-white' : 'border-[#f4f4f4] bg-[#f4f4f4] text-[#686868]'} border-[1px] rounded-[30px] cursor-pointer py-3 px-8 text-3xl sm:py-2 sm:text-2xl md:text-xl lg:text-lg lg:py-1 lg:px-6`}><a>All</a></li>
+                        <li onClick={() => setCategory('indian')} className={`${category === 'indian' ? 'border-[#f05941] bg-[#f05941] text-white' : 'border-[#f4f4f4] bg-[#f4f4f4] text-[#686868]'} border-[1px] rounded-[30px] cursor-pointer py-3 px-8 text-3xl sm:py-2 sm:text-2xl md:text-xl lg:text-lg lg:py-1 lg:px-6`}><a>Indian</a></li>
+                        <li onClick={() => setCategory('mexican')} className={`${category === 'mexican' ? 'border-[#f05941] bg-[#f05941] text-white' : 'border-[#f4f4f4] bg-[#f4f4f4] text-[#686868]'} border-[1px] rounded-[30px] cursor-pointer py-3 px-8 text-3xl sm:py-2 sm:text-2xl md:text-xl lg:text-lg lg:py-1 lg:px-6`}><a>Mexican</a></li>
+                        <li onClick={() => setCategory('chinese')} className={`${category === 'chinese' ? 'border-[#f05941] bg-[#f05941] text-white' : 'border-[#f4f4f4] bg-[#f4f4f4] text-[#686868]'} border-[1px] rounded-[30px] cursor-pointer py-3 px-8 text-3xl sm:py-2 sm:text-2xl md:text-xl lg:text-lg lg:py-1 lg:px-6`}><a>Chinese</a></li>
+                        <li onClick={() => setCategory('italian')} className={`${category === 'italian' ? 'border-[#f05941] bg-[#f05941] text-white' : 'border-[#f4f4f4] bg-[#f4f4f4] text-[#686868]'} border-[1px] rounded-[30px] cursor-pointer py-3 px-8 text-3xl sm:py-2 sm:text-2xl md:text-xl lg:text-lg lg:py-1 lg:px-6`}><a>Italian</a></li>
                     </ul>
                 </div>
 
 
-                <div className="foods-container mx-auto mt-4">
+                <div className="foods-container mx-auto mt-4 w-[100%]">
                     {!isLoading && foodList.length === 0 && <h1 className="text-2xl my-5 text-center font-medium">Sorry, nothing available in <span className="text-[#f05941]">'{category}'</span> category at the moment.</h1>}
                     {<PaginationItems items={currFoodList} isLoading={isLoading} />}
                 </div>

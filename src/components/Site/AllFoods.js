@@ -48,18 +48,18 @@ function AllFoods() {
 
   return (
     <div>
-        <div className='my-5 text-4xl mx-5 cursor-pointer text-[#404040] hover:text-[#f05941]' onClick={goToPrevPageHandler}><i className='bx bx-left-arrow-alt'></i>Go back</div>
-        <h1 className="text-6xl mb-10 text-center text-[500]">All available meals</h1>
+        <div className='my-5 text-4xl mx-5 cursor-pointer text-[#404040] hover:text-[#f05941] md:text-2xl lg:text-xl xl:text-xl xl:my-1' onClick={goToPrevPageHandler}><i className='bx bx-left-arrow-alt'></i>Go back</div>
+        <h1 className="text-6xl mb-10 text-center text-[500] sm:text-5xl lg:text-4xl">All available meals</h1>
 
-        <div className='flex justify-end mr-3 gap-x-2 mb-10 max-[600px]:flex-wrap  max-[600px]:gap-y-2'>
-            <select ref={categoryRef} className='text-[#4a4a4a] py-1 px-5 rounded-lg bg-[#e1e1e1] outline-none text-4xl'>
+        <div className='flex justify-end mr-3 gap-x-2 mb-10 max-[600px]:flex-wrap max-[600px]:gap-y-2'>
+            <select ref={categoryRef} className='text-[#4a4a4a] py-1 px-5 rounded-lg bg-[#e1e1e1] outline-none text-4xl sm:text-3xl md:text-2xl lg:text-xl xl:text-base'>
                 <option value=''>Select a category</option>
                 <option value='indian'>Indian</option>
                 <option value='chinese'>Chinese</option>
                 <option value='mexican'>Mexican</option>
                 <option value='italian'>Italian</option>
             </select>
-            <select ref={priceRef} className='text-[#4a4a4a] py-1 px-5 rounded-lg bg-[#e1e1e1] outline-none text-4xl'>
+            <select ref={priceRef} className='text-[#4a4a4a] py-1 px-5 rounded-lg bg-[#e1e1e1] outline-none text-4xl sm:text-3xl md:text-2xl lg:text-xl xl:text-base'>
                 <option value=''>Select a price range</option>
                 <option value='100'>Upto 100₹</option>
                 <option value='300'>Upto 300₹</option>
@@ -68,11 +68,11 @@ function AllFoods() {
                 <option value='1000'>Upto 1000₹</option>
                 <option value='1000000'>1000₹ and more</option>
             </select>
-            <button onClick={applyFilterHandler} className='border-[#f05941] bg-[#f05941] text-white border-[1px] rounded-3xl text-4xl cursor-pointer py-3 px-8 hover:border-[#f4f4f4] hover:bg-[#f4f4f4] hover:text-[#686868]'>Apply</button>
+            <button onClick={applyFilterHandler} className='border-[#f05941] bg-[#f05941] text-white border-[1px] rounded-3xl text-4xl cursor-pointer py-3 px-8 hover:border-[#f4f4f4] hover:bg-[#f4f4f4] hover:text-[#686868] sm:py-2 sm:text-3xl md:text-2xl lg:text-xl lg:py-1 xl:text-base xl:py-0 xl:px-5'>Apply</button>
         </div>
 
         <div className='mx-auto mt-7 mb-7'>
-            <div className='flex mx-4 flex-wrap gap-x-1 gap-y-2 justify-left'>
+            <div className='flex mx-4 flex-wrap gap-x-1 gap-y-2 justify-left mx-auto md:w-[917px] xl:w-[1226px]'>
                 {isLoading && Array(6).fill(0).map((item, ind) => {
                         return <CardSkeleton key={ind} />
                 })}

@@ -82,7 +82,7 @@ function AllAvailableFoods(props) {
 
   return (
     <div>
-        <h1 className='text-6xl mt-2 mb-12 text-[#484b4bf2] text-center underline'>All Available Food Items</h1>
+        <h1 className='text-6xl mt-2 mb-12 text-[#484b4bf2] text-center underline sm:text-5xl lg:text-4xl xl:text-3xl xl:mb-6'>All Available Food Items</h1>
         
         {loading && <Loading />}
         {!loading && <Table fetchDetails={fetchFoodDetails} columns={columns} data={data} />}
