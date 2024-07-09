@@ -1,70 +1,64 @@
-# Getting Started with Create React App
+# Flavour Found - Your Food Partner
+[Flavour Found - Your Food Partner](https://jhamayank02.github.io/FlavourFound/)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+[Frontend](https://github.com/jhamayank02/FlavourFound/)
 
-## Available Scripts
+[Backend](https://github.com/jhamayank02/FlavourFound-Backend)
 
-In the project directory, you can run:
+Test User Credentials ->
 
-### `npm start`
+Email Id - harry@user.com
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Password - 12345user
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Flavour Found is an online food ordering website, which helps a user to choose a meal from a range of options and order it online with the ease of secured credit/debit card payment. Flavour Found has various industry level features like:-
+1. User account with different roles. Used Passport JS to implement secure authentication process.
+2. Use of ReactJS, facilitate with the reusable components.
+3. User can add meals to the cart, which are saved at the cloud.
+4. Secure payments using Stripe payment gateway.
+5. Admin dashboard with all the necessary details like sales analysis data, food stocks, payment details, etc.
+6. A contact form and much more.
 
-### `npm test`
+### Tech Stack Used
+1. React JS
+2. Node JS
+3. Express JS
+4. MongoDB
+5. Tailwind CSS
+6. Cloudinary
+7. Stripe
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Libraries Used
+#### Frontend
+- form-data
+- react-loading-skeleton
+- react-router-dom
+- react-table
 
-### `npm run build`
+#### Backend
+- cloudinary
+- cors
+- dotenv
+- jsonwebtoken
+- mongoose
+ - multer
+- multer-storage-cloudinary
+- passport
+- passport-jwt
+- passport-local
+- passport-local-mongoose
+- stripe
+- nodemon
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### Screenshots
+![Screenshot 2024-02-20 205740](https://github.com/jhamayank02/FlavourFound/assets/85916933/c67b882e-5028-4700-a964-bf1b41d41f59)
+![Screenshot 2024-02-20 205836](https://github.com/jhamayank02/FlavourFound/assets/85916933/eaf2ca97-2c32-42f5-a7cf-be1f935170ad)
+![Screenshot 2024-02-20 205934](https://github.com/jhamayank02/FlavourFound/assets/85916933/de65501e-04b5-4e50-ae95-f04330da658f)
+![Screenshot 2024-02-20 210037](https://github.com/jhamayank02/FlavourFound/assets/85916933/2264adad-bdb6-4772-864b-835f3514203b)
+![Screenshot 2024-02-20 210109](https://github.com/jhamayank02/FlavourFound/assets/85916933/a1124769-4da9-4bb1-afdf-d9fb9092b5f2)
+![Screenshot 2024-02-20 210706](https://github.com/jhamayank02/FlavourFound/assets/85916933/864f80e8-7910-4c58-a19f-ddc76db6bfca)
+![Screenshot 2024-02-20 210353](https://github.com/jhamayank02/FlavourFound/assets/85916933/772515e8-b25f-4e44-88a1-ff92582ed68f)
+![Screenshot 2024-02-20 210620](https://github.com/jhamayank02/FlavourFound/assets/85916933/39d9c8ae-f24e-4ccc-89ca-19bde4148754)
+![All foods](https://github.com/jhamayank02/FlavourFound/assets/85916933/240e1242-4840-4579-8a0e-01b34a9d5134)
+![Screenshot 2024-02-20 210933](https://github.com/jhamayank02/FlavourFound/assets/85916933/57ee2d85-6160-43b6-8ae3-e69c1fa63a76)
+![Screenshot 2024-02-20 211020](https://github.com/jhamayank02/FlavourFound/assets/85916933/2078ad43-0bb3-4f22-aef6-cc185256ca77)
